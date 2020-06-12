@@ -59,5 +59,5 @@ function fusion-get-ip() {
 }
 
 function start-linux-workstation() {
-    fusion-start-vm macfail-fedora.lab.dchin.dev
+    fusion-start-vm macfail-centos.lab.dchin.dev
 }
