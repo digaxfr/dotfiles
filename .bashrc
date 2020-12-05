@@ -18,6 +18,7 @@ export PATH
 # User specific aliases and functions
 EDITOR=vim
 
+# https://wiki.archlinux.org/index.php/HiDPI#Xorg
 function set-hidpi-xorg() {
     xrandr --output DP-4 --scale 1.5x1.5
 }
