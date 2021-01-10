@@ -1,24 +1,21 @@
-# .bashrc
+#
+# ~/.bashrc
+#
 
-# Source global definitions
-if [ -f /etc/bashrc ]; then
-	. /etc/bashrc
-fi
+# If not running interactively, don't do anything
+[[ $- != *i* ]] && return
 
-# User specific environment
-if ! [[ "$PATH" =~ "$HOME/.local/bin:$HOME/bin:" ]]
-then
-    PATH="$HOME/.local/bin:$HOME/bin:$PATH"
-fi
-export PATH
+alias ls='ls --color=auto'
+PS1='[\u@\h \W]\$ '
 
-# Uncomment the following line if you don't like systemctl's auto-paging feature:
-# export SYSTEMD_PAGER=
-
-# User specific aliases and functions
 EDITOR=vim
+PATH=$PATH:~/bin
 
 # https://wiki.archlinux.org/index.php/HiDPI#Xorg
 function set-hidpi-xorg() {
     xrandr --output DP-4 --scale 1.5x1.5
+}
+
+function sshfs-macfailpro() {
+    sshfs darrenchin@macfailpro.dchin.dev:/Users/darrenchin ~/macfailpro.dchin.dev -p 8022
 }
