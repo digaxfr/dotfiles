@@ -10,3 +10,5 @@ set shiftwidth=4
 set statusline=%t,%c
 set tabstop=4
 syntax on
+autocmd FileType make set noexpandtab
+autocmd FileType go set noexpandtab

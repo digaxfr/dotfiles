@@ -7,7 +7,7 @@ alias ls='ls -G'
 alias grep='grep --color'
 alias egrep='egrep --color'
 
-export PATH=~/Library/Python/3.7/bin:$PATH
+#export PATH=~/Library/Python/3.7/bin:$PATH
 
 # Autocompletion
 # man zshoptions
@@ -23,6 +23,10 @@ unsetopt AUTO_MENU
 
 # vi/vim mode
 bindkey -v '^?' backward-delete-char
+
+# Locale settings
+export LC_ALL=en_US.UTF-8
+export LANG=en_US.UTF-8
 
 VM_BASE_DIR="${HOME}/Virtual Machines.localized"
 VM_DIR_SUFFIX=".vmwarevm"
@@ -59,5 +63,5 @@ function fusion-get-ip() {
 }
 
 function start-linux-workstation() {
-    fusion-start-vm macfail-centos.lab.dchin.dev
+    fusion-start-vm macfail-fedora.lab.dchin.dev
 }
