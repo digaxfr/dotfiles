@@ -10,7 +10,10 @@ return {
     local lspconfig = require("lspconfig")
 
     -- Configure LSP servers
-    lspconfig["ansiblels"].setup({})
+    lspconfig["ansiblels"].setup({
+      settings = {},
+      filetypes = { 'yaml.ansible' }
+    })
     lspconfig["bashls"].setup({})
     lspconfig["jsonls"].setup({})
     lspconfig["lua_ls"].setup({})
