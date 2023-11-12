@@ -19,6 +19,37 @@ vim.opt.syntax = 'on'
 vim.opt.tabstop = 4
 vim.opt.termguicolors = true
 
--- autocmd FileType make set noexpandtab 
--- autocmd FileType go set noexpandtab 
+
+-- Turn off auto comments
+vim.api.nvim_create_autocmd('BufEnter', {
+  callback = function()
+    vim.opt.formatoptions:remove { 'c', 'r', 'o' }
+  end,
+  desc = 'Disable New Line Comment',
+  }
+)
+
+-- Disable expandtab on Makefile
+vim.api.nvim_create_autocmd('FileType', {
+  pattern = 'make',
+  callback = function()
+    vim.opt.expandtab = false
+  end
+  }
+)
+
+-- Disable expandtab on golang
+vim.api.nvim_create_autocmd({'FileType'}, {
+  pattern = 'go',
+  callback = function()
+    vim.opt.expandtab = false
+  end
+  }
+)
+
 -- autocmd BufWritePre * :%s/\s\+$//e
+vim.api.nvim_create_autocmd({'BufWritePre'}, {
+   pattern = '*',
+   command = ':%s/\\s\\+$//e'
+  }
+)
