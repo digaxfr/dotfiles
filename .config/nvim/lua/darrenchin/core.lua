@@ -53,3 +53,12 @@ vim.api.nvim_create_autocmd({'BufWritePre'}, {
    command = ':%s/\\s\\+$//e'
   }
 )
+
+-- Stop smart indent for yaml because it ain't that smart.
+vim.api.nvim_create_autocmd({'FileType'}, {
+  pattern = 'yaml',
+  callback = function()
+    vim.opt.indentexpr = ''
+  end
+  }
+)
