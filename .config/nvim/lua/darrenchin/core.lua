@@ -19,6 +19,8 @@ vim.opt.syntax = 'on'
 vim.opt.tabstop = 4
 vim.opt.termguicolors = true
 
+-- Set leader key to space
+vim.g.mapleader = ' '
 
 -- Turn off auto comments
 vim.api.nvim_create_autocmd('BufEnter', {
@@ -56,7 +58,7 @@ vim.api.nvim_create_autocmd({'BufWritePre'}, {
 
 -- Stop smart indent for yaml because it ain't that smart.
 vim.api.nvim_create_autocmd({'FileType'}, {
-  pattern = 'yaml',
+  pattern = {'yaml', 'yaml.ansible'},
   callback = function()
     vim.opt.indentexpr = ''
   end

@@ -21,5 +21,9 @@ return {
     lspconfig["terraformls"].setup({})
     lspconfig["yamlls"].setup({})
 
+    -- Set up additional keybindings
+--    opts.desc = "Show line diagnostics"
+    vim.keymap.set("n", "<leader>d", vim.diagnostic.open_float, opts) -- show diagnostics for line
+
   end,
 }
