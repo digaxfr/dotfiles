@@ -19,7 +19,14 @@ return {
     lspconfig["jsonls"].setup({})
     lspconfig["lua_ls"].setup({})
     lspconfig["pyright"].setup({})
-    lspconfig["terraformls"].setup({})
+    lspconfig["terraformls"].setup({
+      vim.api.nvim_create_autocmd({"BufWritePre"}, {
+        pattern = {"*.tf", "*.tfvars"},
+        callback = function()
+          vim.lsp.buf.format()
+        end,
+      })
+    })
     lspconfig["yamlls"].setup({})
 
     -- Set up additional keybindings
