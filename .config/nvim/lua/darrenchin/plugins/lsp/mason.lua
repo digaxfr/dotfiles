@@ -29,6 +29,7 @@ return {
       ensure_installed = {
         "ansiblels",
         "bashls",
+        "helm_ls",
         "jsonls",
         "lua_ls",
         "pyright",
