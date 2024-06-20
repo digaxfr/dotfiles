@@ -1,0 +1,13 @@
+[font]
+size = 8
+
+[font.normal]
+family = "FiraCodeNerdFont"
+style = "Normal"
+
+[font.offset]
+x = 0
+y = 0
+
+[scrolling]
+history = 20000
