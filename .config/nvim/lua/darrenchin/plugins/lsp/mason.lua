@@ -29,6 +29,7 @@ return {
       ensure_installed = {
         "ansiblels@v1.2.0",
         "bashls",
+        "gopls",
         "helm_ls",
         "jsonls",
         "lua_ls",
