@@ -27,7 +27,7 @@ return {
     mason_lspconfig.setup({
       -- list of servers for mason to install
       ensure_installed = {
-        "ansiblels@v1.2.0",
+        "ansiblels",
         "bashls",
         "gopls",
         "helm_ls",
