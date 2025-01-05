@@ -8,7 +8,8 @@
 alias ls='ls --color=auto'
 alias grep='grep --color=auto'
 #PS1='[\u@\h \W]\$ '
-PS1='\[\e[32m\]\u@\h\[\e[0m\] \[\e[34m\]\W\[\e[0m\] \$ '
+#PS1='\[\e[32m\]\u@\h\[\e[0m\] \[\e[34m\]\W\[\e[0m\] \$ '
+PS1='\[\e]0;\u@\h: \w\a\]\[\033[01;32m\]\u@\h\[\033[00m\]:\[\033[01;34m\]\w\[\033[00m\]\$ '
 
 EDITOR=vim
 PATH=$PATH:~/bin
